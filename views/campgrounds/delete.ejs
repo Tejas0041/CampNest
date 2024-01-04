@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<h2>Select Images</h2>
+
+<form action="/campground/<%= campground._id %>/images/delete" method="POST">
+<div class="card mb-3" style="max-width: auto;">
+    <div class="row g-0">
+        <div class="col-md-4">
+          <% campground.images.forEach((img, index) =>{ %>
+            <label for="image-<%= index %>">
+            <img src="<%= img.thumbnail %>" class="img-thumbnail" style="margin-bottom: 12px;">
+            </label>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <span>
+                        <label for="image-<%= index %>">Delete? </label>
+                        <input type="checkbox" id="image-<%= index %>" name="deleteImages[]" value="<%= img.filename %>">
+                    </span>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<button type="submit" class="btn btn-danger">Delete selected images</button>
+<br><br>
+<a href="/campground/<%= campground._id %>/edit" class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 10, 59, 138;">Back to edit page</a>
+</form>

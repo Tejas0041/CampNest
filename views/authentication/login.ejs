@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+
+<form action="/login" method="POST" class="validated-form mt-3" novalidate>
+    <div class="" style="display: grid; justify-content: center; align-items: center; font-size: 21px;">
+        <center><h2 style="font-size: 37px; font-weight: bold;" class="mb-1 mt-3">Login</h2></center>
+        <div class="mb-3 mt-3">
+            <label class="form-label" for="username">Username: </label>
+            <input class="form-control" style="border: 0.01cm solid black;" type="text" name="username" id="username" autofocus required>
+            <div class="invalid-feedback">
+                Please add a username
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label" for="password">Password: </label>
+            <input class="form-control" style="border: 0.01cm solid black;" type="password" name="password" id="password" required>
+            <div class="invalid-feedback">
+                Please add a password
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success mb-3" style="font-size: 18px;">Log In</button>
+
+        <p class="mb-3">Do not have an account? <a href="/register" style="text-decoration: none;">Sign Up</a></p>
+    </div>
+
+    <!-- <a class="nav-link" href="/register">Sign Up</a> -->
+
+</form>

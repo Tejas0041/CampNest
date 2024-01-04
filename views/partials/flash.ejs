@@ -1,0 +1,17 @@
+<% if(success && success.length){ %>  <!--success is an object so we will check that the success object exists or not by checking its length-->
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" fdprocessedid="u1duro"></button>
+    </div>
+
+<% } %>
+
+<% if(error && error.length){ %>  <!--success is an object so we will check that the success object exists or not by checking its length-->
+
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" fdprocessedid="u1duro"></button>
+    </div>
+
+<% } %>

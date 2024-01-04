@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp</title>
+
+    <!-- CSS file to be included to use Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+    <script crossorigin="anonymous" src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+    <link crossorigin="anonymous" href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/styles/boilerplate.css">
+
+  </head>
+
+  <body class="d-flex flex-column vh-100" style="background-color:rgba(248, 248, 248, 0.5);" > <!-- for taking the footer to bottom of page -->
+
+    <%- include('../partials/navbar.ejs') %>
+    <main class="container mt-4 mb-4">  <!-- margin-top (mt) =4-->
+
+      <%- include('../partials/flash.ejs') %>
+      <%- body -%>
+
+    </main>    <!--  we can fit our body in this template/layout -->
+
+    <%- include('../partials/footer.ejs') %>
+
+    <!-- JS dependecies for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+</body>
+
+<script src='/scripts/validateForms.js'></script>
+
+</html>

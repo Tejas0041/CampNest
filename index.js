@@ -176,10 +176,4 @@ app.listen(8080, ()=>{
     console.log(`Server started successfully at port 8080`);
 });
 
-if(process.env.isLive===false)
-{
-    app.close(() => {
-    console.log('Server closed.');
-    process.exit(0);
-  });
 }

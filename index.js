@@ -2,6 +2,14 @@ if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
 
+if(process.env.isLive===false)
+{
+    app.close(() => {
+    console.log('Server closed.');
+    process.exit(0);
+  });
+}
+
 const express= require('express');
 const app= express();
 const mongoose= require('mongoose');

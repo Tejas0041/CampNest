@@ -8,7 +8,7 @@ const upload= multer({storage});
 
 const {isLoggedIn}= require('../middleware.js');
 
-const {isAuthor, validateCampground}= require('../middleware.js');
+const {isAuthor, validateCampground, isAdmin}= require('../middleware.js');
 
 //using controller.. by using this we can shorten our routes.
 router.get('/', catchAsync(campController.homePage));

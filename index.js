@@ -2,14 +2,6 @@ if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
 
-if(process.env.isLive===false)
-{
-    app.close(() => {
-    console.log('Server closed.');
-    process.exit(0);
-  });
-}
-
 const express= require('express');
 const app= express();
 const mongoose= require('mongoose');
@@ -183,3 +175,11 @@ app.use((err, req, res, next)=>{
 app.listen(8080, ()=>{
     console.log(`Server started successfully at port 8080`);
 });
+
+if(process.env.isLive===false)
+{
+    app.close(() => {
+    console.log('Server closed.');
+    process.exit(0);
+  });
+}

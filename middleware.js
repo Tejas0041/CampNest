@@ -60,7 +60,7 @@ module.exports.isReviewAuthor= async(req, res, next)=>{
 }
 
 module.exports.isAdmin= async(req, res, next)=>{
-    if(!('65869c99a5db86bc05d7b34c'===(req.user._id)))
+    if(!('tejas'===(req.user.username)))
     {
         req.flash('error', 'You not authorized for that');
         return res.redirect(`/campground/map`);

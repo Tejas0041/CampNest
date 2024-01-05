@@ -4,7 +4,7 @@ const cities = require('./cities');
 const {places, descriptors}= require('./seedHelpers.js');
 const Campground= require('../models/campground.js');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.DB_URL);
 
 const db= mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));

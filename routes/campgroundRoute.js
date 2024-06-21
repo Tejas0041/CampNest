@@ -20,8 +20,8 @@ router.route('/map')
       .get(catchAsync(campController.map));
 
 router.route('/new')
-      .get(isLoggedIn, isAdmin, campController.newCampgroundForm)
-      .post(isLoggedIn, isAdmin, upload.array('image'), validateCampground, catchAsync(campController.createCampground));
+      .get(isLoggedIn, campController.newCampgroundForm)
+      .post(isLoggedIn, upload.array('image'), validateCampground, catchAsync(campController.createCampground));
 
 
 router.route('/:id/images/delete')

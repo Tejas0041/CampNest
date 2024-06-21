@@ -25,8 +25,8 @@ router.route('/new')
 
 
 router.route('/:id/images/delete')
-      .get(isLoggedIn, isAuthor, catchAsync(campController.renderDeleteImages))
-      .post(isLoggedIn, isAuthor, catchAsync(campController.postDeleteImages));
+      .get(isLoggedIn, catchAsync(campController.renderDeleteImages))
+      .post(isLoggedIn, catchAsync(campController.postDeleteImages));
 
 router.get('/:id/edit',isLoggedIn, isAuthor, catchAsync(campController.editCampgroundForm));
 
